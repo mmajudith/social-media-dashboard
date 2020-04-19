@@ -1,0 +1,268 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+}
+
+#container {
+  max-width: 1440px;
+  height: 100%;
+  width: 100%;
+  margin: auto auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+.dark {
+  background-color: #1e202a;
+}
+.dark #toggle {
+  display: inline-block;
+  color: #3eda82;
+  cursor: pointer;
+}
+.dark #toggle:hover {
+  color: white;
+}
+.dark h1, .dark h2, .dark p {
+  color: white;
+}
+.dark span {
+  color: #63687e;
+}
+.dark li {
+  background-color: #252a41;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.dark li:hover {
+  background-color: #374062;
+}
+
+.light {
+  background-color: white;
+}
+.light #toggle {
+  color: #aeb3cb;
+  cursor: pointer;
+}
+.light #toggle:hover {
+  color: #3eda82;
+}
+.light h1, .light h2, .light p {
+  color: #1e202a;
+}
+.light span {
+  color: #63687e;
+}
+.light li {
+  background-color: #f0f2fa;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+.light li:hover {
+  background-color: #dee1ed;
+}
+.light .attribution {
+  color: #1e202a;
+}
+
+.header {
+  width: 80%;
+  margin: auto auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media screen and (max-width: 400px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .header .dashboard {
+    width: 100%;
+    border-bottom: 1px solid #63687e;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .header .dashboard h1 {
+    font-size: 20px;
+  }
+  .header .change-mode {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.header .dashboard span {
+  margin-top: 5px;
+}
+.header .mode-text {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.followers {
+  width: 80%;
+  margin: auto auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+.followers li {
+  width: 22.5%;
+  height: 200px;
+}
+.followers li div {
+  padding: 20px 0px 5px 0px;
+}
+.followers li div .name {
+  font-size: 10px;
+  display: inline-block;
+}
+.followers li div .le-spacing {
+  display: inline-block;
+  letter-spacing: 4px;
+  padding-bottom: 5px;
+}
+.followers li div .up {
+  font-size: 10px;
+  color: #1db489;
+}
+.followers li div .down {
+  font-size: 10px;
+  color: #dc414c;
+}
+.followers li div .up-icon {
+  padding-bottom: 1px;
+}
+.followers li div .down-icon {
+  padding-bottom: 1px;
+}
+.followers .fa-follower {
+  border-top: 4px solid deepskyblue;
+}
+.followers .tw-follower {
+  border-top: 4px solid #1ca0f2;
+}
+.followers .sta-follower {
+  border-top: 4px solid #fdc468;
+}
+.followers .yu-follower {
+  border-top: 4px solid #c4032a;
+}
+.followers p {
+  font-size: 60px;
+  margin-top: 10px;
+}
+@media screen and (max-width: 980px) {
+  .followers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  .followers li {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .followers {
+    display: flex;
+    flex-direction: column;
+  }
+  .followers li {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.head-two {
+  font-size: 16px;
+  margin-left: 10%;
+  margin-top: 25px;
+}
+
+#likes {
+  width: 80%;
+  margin: auto auto;
+  padding: 60px 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+#likes li {
+  height: 150px;
+}
+#likes li div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 15px;
+}
+#likes li div .sec-social-icon {
+  margin-left: 70px;
+  margin-top: 2px;
+}
+#likes li div #up1, #likes li div #up2, #likes li div #up3, #likes li div #up4, #likes li div #up5 {
+  font-size: 10px;
+  color: #1db489;
+  margin-top: 12px;
+}
+#likes li div #down, #likes li div #down1, #likes li div #down2 {
+  font-size: 10px;
+  color: #dc414c;
+  margin-top: 12px;
+}
+#likes li div .sec-social-rate {
+  margin-left: 40px;
+  margin-top: 16px;
+}
+#likes li div p {
+  font-size: 35px;
+}
+@media screen and (max-width: 1150px) {
+  #likes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 869px) {
+  #likes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  #likes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  padding-bottom: 30px;
+}
+
+.attribution a {
+  color: #3e52a3;
+  text-decoration: none;
+  color: #1db489;
+}

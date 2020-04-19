@@ -1,0 +1,225 @@
+@import "variables";
+@import "mixin";
+@import "reset";
+
+
+
+.dark{
+    background-color:$VeryDarkBlueBG;
+    #toggle{
+        display: inline-block;
+        color:  hsl(146, 68%, 55%);
+        cursor: pointer;
+    }
+    #toggle:hover{
+        color: $WhiteText;
+    }
+    h1, h2, p{
+        color: $WhiteText;
+    }
+    span{
+        color: $DarkGrayishBlueText;
+    }
+    li{
+        background-color: $DarkDesaturatedBlueCardBG;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        &:hover{
+            background-color: lighten($DarkDesaturatedBlueCardBG, 10);
+        }
+    }
+}
+
+.light{
+    background-color:$WhiteBG;
+    #toggle{
+        color:  $lightThemeToggle;
+        cursor: pointer;
+        &:hover {
+                color:  hsl(146, 68%, 55%); 
+            
+        }
+     }
+    h1, h2, p{
+        color:  hsl(230, 17%, 14%);
+    }
+    span{
+        color: $DarkGrayishBlueText;
+    }
+    li{
+        background-color: $LightGrayishBlueCardBG;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        &:hover{
+            background-color: lighten($DarkDesaturatedBlueCardBG, 70);
+        }
+    }
+    .attribution{color: hsl(230, 17%, 14%) ;}
+}
+
+.header{
+    @include layoutSize;
+    @include mq(400px){
+            display: flex;
+            flex-direction: column;
+            .dashboard{
+                width: 100%;
+                border-bottom: 1px solid  $DarkGrayishBlueText;
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                h1{
+                    font-size: 20px;
+                }
+            } 
+            .change-mode{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+            } 
+    }
+    .dashboard span{
+        margin-top: 5px;
+    }
+    .mode-text{
+        margin-right: 10px;
+        font-size: 12px;
+    }
+}
+
+.followers{
+    @include layoutSize;
+    text-align: center;
+    li{
+        width: (90% / 4);
+        height: 200px;
+        div{
+            padding: 20px 0px 5px 0px;
+            .name{
+                 font-size: 10px;
+                 display: inline-block;
+                
+             }
+            .le-spacing{
+                 display: inline-block;
+                 letter-spacing: 4px; 
+                 padding-bottom: 5px;            
+            }
+            .up{
+                 font-size: 10px;
+                 color: $LimeGreen;   
+             }
+            .down{
+                font-size: 10px;
+                color: $BrighRed;
+             }
+            .up-icon{
+                 padding-bottom: 1px;
+             }
+             .down-icon{
+                padding-bottom: 1px;
+             }
+        }
+    }
+    .fa-follower{
+        border-top: 4px solid $Facebook;
+    }
+    .tw-follower{
+        border-top: 4px solid  $Twitter;
+    }
+    .sta-follower{
+        border-top: 4px solid  hsl(37, 97%, 70%) ;
+    }
+    .yu-follower{
+        border-top: 4px solid  $YouTube;
+    }
+    p{
+        font-size: 60px;
+        margin-top: 10px;
+    }
+    @include mq(980px){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+           li{
+               width: 100%;
+               
+          }
+    }
+    @include mq(400px){
+        display: flex;
+        flex-direction: column;
+          li{
+              width: 100%;
+              margin-bottom: 20px;
+          }
+    }     
+}
+
+.head-two{
+    font-size: 16px;
+    margin-left: 10%;
+    margin-top: 25px;
+}
+
+#likes{
+    width: $eightPercentWidith;
+    margin: $autoMargin;
+    padding: 60px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-gap: 30px;
+        li {
+            height: 150px;
+            div{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows:  repeat(2, 1fr);
+                margin: 15px;
+                .sec-social-icon{
+                    margin-left: 70px;
+                    margin-top: 2px;
+                }
+                #up1, #up2, #up3, #up4, #up5{
+                    font-size: 10px;
+                    color: $LimeGreen; 
+                    margin-top: 12px;  
+                }
+               #down, #down1, #down2{
+                   font-size: 10px;
+                   color: $BrighRed;
+                   margin-top: 12px; 
+                }
+                
+                 .sec-social-rate{
+                     margin-left: 40px;
+                     margin-top: 16px;
+                 }
+                p{
+                    font-size: 35px;
+                    
+                }
+        } 
+    }
+    @include mq(1150px){
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) ;
+
+    }
+    @include mq(869px){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) ;
+         
+    }
+    @include mq(600px){
+        display: grid;
+        grid-template-columns: repeat( 1, 1fr);     
+        
+    }
+}
+
+
+.attribution { font-size: 14px; text-align: center; color: $WhiteText;padding: 20px; padding-bottom: 30px;}
+.attribution a { color: hsl(228, 45%, 44%); text-decoration: none; color: $LimeGreen;}
