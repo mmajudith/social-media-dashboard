@@ -7,12 +7,14 @@
 .dark{
     background-color:$VeryDarkBlueBG;
     #toggle{
-        display: inline-block;
-        color:  hsl(146, 68%, 55%);
+        color: hsl(146, 68%, 55%);
         cursor: pointer;
     }
     #toggle:hover{
         color: $WhiteText;
+    }
+    #toggle2{
+        display: none;
     }
     h1, h2, p{
         color: $WhiteText;
@@ -34,6 +36,9 @@
 .light{
     background-color:$WhiteBG;
     #toggle{
+        display: none;
+     }
+     #toggle2{
         color:  $lightThemeToggle;
         cursor: pointer;
         &:hover {
@@ -61,31 +66,31 @@
 
 .header{
     @include layoutSize;
-    @include mq(400px){
-            display: flex;
-            flex-direction: column;
-            .dashboard{
-                width: 100%;
-                border-bottom: 1px solid  $DarkGrayishBlueText;
-                margin-bottom: 20px;
-                padding-bottom: 20px;
-                h1{
-                    font-size: 20px;
-                }
-            } 
-            .change-mode{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-
-            } 
-    }
     .dashboard span{
         margin-top: 5px;
     }
     .mode-text{
         margin-right: 10px;
         font-size: 12px;
+    }
+    @include mq(400px){
+        display: flex;
+        flex-direction: column;
+        .dashboard{
+            width: 100%;
+            border-bottom: 1px solid  $DarkGrayishBlueText;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            h1{
+                font-size: 20px;
+            }
+        } 
+        .change-mode{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        } 
     }
 }
 
